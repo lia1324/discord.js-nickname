@@ -12,12 +12,6 @@ client.once('ready', () => {
   console.log(`로그인 완료 | ${client.user.tag}!`)
 })
 
-
-client.on('message', async message => {
-  if (message.content === '핑') return message.reply('퐁')
-  await DokdoHandler.run(message)
-})
-
 client.on('guildMemberAdd', member => {
  member.setNickname(`고유번호 | ${member.user.username} | 직업`);
   try {
